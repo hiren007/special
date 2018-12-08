@@ -1,0 +1,5 @@
+com\test\base\TestBase.class
+com\test\pages\HomePage.class
+com\test\testcase\PlanSelectTestcase.class
+com\test\pages\SignUpPage.class
+com\test\pages\PlanSelectPage.class

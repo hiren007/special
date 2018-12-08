@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Main Suite]" parallel="tests">
+  <parameter name="test" value="Chrome Browser"/>
+  <parameter name="browser" value="Chrome"/>
+  <test name="Test(failed)" parallel="tests">
+    <parameter name="test" value="Chrome Browser"/>
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.test.testcase.HomeTestcase">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.HomeTestcase -->
+      <class name="com.test.testcase.ForgotPasswordTestcase">
+        <methods>
+          <include name="validemailadress"/>
+          <include name="invalidmailadress"/>
+          <include name="afterMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.ForgotPasswordTestcase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="test" value="Firefox Browser"/>
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.test.testcase.HomeTestcase">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.HomeTestcase -->
+      <class name="com.test.testcase.ForgotPasswordTestcase">
+        <methods>
+          <include name="invalidmailadress"/>
+          <include name="afterMethod"/>
+          <include name="afterMethod"/>
+          <include name="mailidblank"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="doesnotexistmailadress"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.ForgotPasswordTestcase -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Main Suite] -->

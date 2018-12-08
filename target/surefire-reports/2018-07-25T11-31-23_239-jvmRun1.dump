@@ -1,0 +1,30 @@
+# Created on 2018-07-25T11:31:25.037
+org.testng.TestNGException: 
+An exception occurred in static initialization of class com.test.listeners.TestListener
+	at org.testng.internal.ClassHelper.newInstance(ClassHelper.java:63)
+	at org.testng.TestNG.initializeConfiguration(TestNG.java:901)
+	at org.testng.TestNG.run(TestNG.java:998)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.ExceptionInInitializerError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.testng.internal.ClassHelper.newInstance(ClassHelper.java:50)
+	... 9 more
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at com.test.utilities.ExtentManager.createReportPath(ExtentManager.java:49)
+	at com.test.utilities.ExtentManager.getReportFileLocation(ExtentManager.java:43)
+	at com.test.utilities.ExtentManager.createInstance(ExtentManager.java:25)
+	at com.test.listeners.TestListener.<clinit>(TestListener.java:13)
+	... 15 more
+
+

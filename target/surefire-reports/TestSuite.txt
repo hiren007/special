@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 193.907 s <<< FAILURE! - in TestSuite
+mailidblank(com.test.testcase.ForgotPasswordTestcase)  Time elapsed: 9.396 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+The element reference of <div> stale: either the element is no longer attached to the DOM or the page has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+	at com.test.testcase.ForgotPasswordTestcase.mailidblank(ForgotPasswordTestcase.java:18)
+
+invalidmailadress(com.test.testcase.ForgotPasswordTestcase)  Time elapsed: 29.329 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //*[@tabindex='1']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+*** Element info: {Using=xpath, value=//*[@tabindex='1']}
+	at com.test.testcase.ForgotPasswordTestcase.invalidmailadress(ForgotPasswordTestcase.java:26)
+
+invalidmailadress(com.test.testcase.ForgotPasswordTestcase)  Time elapsed: 61.007 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //*[contains(text(),'Invalid')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+*** Element info: {Using=xpath, value=//*[contains(text(),'Invalid')]}
+	at com.test.testcase.ForgotPasswordTestcase.invalidmailadress(ForgotPasswordTestcase.java:32)
+
+doesnotexistmailadress(com.test.testcase.ForgotPasswordTestcase)  Time elapsed: 37.932 s  <<< FAILURE!
+java.lang.AssertionError: expected [Email doesn't exists.] but found [Invalid Email Address.]
+	at com.test.testcase.ForgotPasswordTestcase.doesnotexistmailadress(ForgotPasswordTestcase.java:46)
+
+validemailadress(com.test.testcase.ForgotPasswordTestcase)  Time elapsed: 37.954 s  <<< FAILURE!
+java.lang.AssertionError: expected [Email sent to user.] but found [Invalid Email Address.]
+	at com.test.testcase.ForgotPasswordTestcase.validemailadress(ForgotPasswordTestcase.java:60)
+

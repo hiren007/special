@@ -1,0 +1,3309 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Report</title>
+
+	<style type='text/css'>
+			
+            
+                
+            
+        
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>SITE WON</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Aug 4, 2018 04:46:10 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='93.75%'><span class='strong'>15</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='6.25%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='3.112%'><span class='strong'>15</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0.207%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='96.68%'>466</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>HomeTestcase</span>
+						<span class='test-time'>Aug 4, 2018 04:46:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 4, 2018 04:46:31 PM</span>
+	<span class='label end-time'>Aug 4, 2018 04:46:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+379ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>clickonsignup</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:46:33 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+345ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:32 PM</td>
+													<td class='step-details'>Click on signup</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:46:33 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_clickonsignup_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_clickonsignup_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_clickonsignup_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>PlanSelectTestcase</span>
+						<span class='test-time'>Aug 4, 2018 04:46:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 4, 2018 04:46:34 PM</span>
+	<span class='label end-time'>Aug 4, 2018 04:46:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+50ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>planselect</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:46:36 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+44ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:35 PM</td>
+													<td class='step-details'>Growth best saller plan selected.</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:46:36 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_planselect_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_planselect_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_planselect_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>SignUpTestcase</span>
+						<span class='test-time'>Aug 4, 2018 04:46:36 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 4, 2018 04:46:36 PM</span>
+	<span class='label end-time'>Aug 4, 2018 04:50:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 6s+93ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>withoutcredentialclickonpaymentdeailnext</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:46:52 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+810ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:43 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Enter email address : testa29@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:44 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:45 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:45 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:46 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:47 PM</td>
+													<td class='step-details'>Select state : Oklahoma</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:47 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:47 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:47 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:47 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Card number is required. validation verify</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Card holder name is required. validation verify</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Card exp. detail is required. validation verify</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>CVV code is required. validation verify</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Please accept term of use to continue. validation verify</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:48 PM</td>
+													<td class='step-details'>Without enter credential click on paynow button</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:46:52 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutcredentialclickonpaymentdeailnext_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutcredentialclickonpaymentdeailnext_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutcredentialclickonpaymentdeailnext_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='7'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cardnumberblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:47:07 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+351ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Enter email address : testa30@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:46:59 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Enter fisrt name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:00 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:01 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:01 PM</td>
+													<td class='step-details'>Select state : South Carolina</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:01 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:01 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:01 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Enter card number :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:02 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:03 PM</td>
+													<td class='step-details'>Select month : 08</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:03 PM</td>
+													<td class='step-details'>Select Year : 2022</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:03 PM</td>
+													<td class='step-details'>Clear cvv code sucessfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:03 PM</td>
+													<td class='step-details'>Enter cvv code : 124</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:04 PM</td>
+													<td class='step-details'>Terms of use checkbox cheked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:04 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:04 PM</td>
+													<td class='step-details'>Cardnumber balank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:47:07 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardnumberblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardnumberblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardnumberblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>invalidcardnumber</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:47:23 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+804ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Enter email address : testa31@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:15 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:16 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Select state : Wyoming</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:17 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:18 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:18 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:18 PM</td>
+													<td class='step-details'>Enter card number : 124859</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:18 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:18 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:19 PM</td>
+													<td class='step-details'>Select month : 09</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:19 PM</td>
+													<td class='step-details'>Select year : 2020</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:19 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:19 PM</td>
+													<td class='step-details'>Enter cvv code : 124</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:20 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:20 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:20 PM</td>
+													<td class='step-details'>Card number must be at least 12 characters long. validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:47:23 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcardnumber_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcardnumber_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcardnumber_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cardholdernameblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:47:38 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+778ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:30 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:30 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:30 PM</td>
+													<td class='step-details'>Enter email address : testa32@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:31 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Clear city</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Select state : Virginia</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:32 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:33 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:34 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:34 PM</td>
+													<td class='step-details'>Enter card hoder name :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:34 PM</td>
+													<td class='step-details'>Select month : 10</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:34 PM</td>
+													<td class='step-details'>Select year : 2021</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:35 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:35 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:35 PM</td>
+													<td class='step-details'>Terms of use checkbox cheked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:35 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:35 PM</td>
+													<td class='step-details'>Card holder name blank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:47:38 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardholdernameblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardholdernameblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardholdernameblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cardmonthblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:47:53 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+112ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Enter email address : testa33@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:45 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:46 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:47 PM</td>
+													<td class='step-details'>Select state : District of Columbia</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:47 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:47 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:47 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:47 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:48 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:48 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:48 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:48 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:48 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:49 PM</td>
+													<td class='step-details'>Select year : 2023</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:49 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:49 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:49 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:50 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:47:50 PM</td>
+													<td class='step-details'>Cardmonth_month_exp blank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:47:53 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardmonthblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardmonthblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardmonthblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cardyearblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:48:10 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 16s+407ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:00 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:01 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:01 PM</td>
+													<td class='step-details'>Enter email address : testa34@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:01 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:01 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:01 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:02 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:02 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:02 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:03 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:04 PM</td>
+													<td class='step-details'>Select state : Colorado</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:04 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:04 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:04 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:04 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:05 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:05 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:05 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:05 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:05 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Select month : 12</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Click on paynow button successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:06 PM</td>
+													<td class='step-details'>Card_year_exp blank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:48:10 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardyearblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardyearblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cardyearblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cvvcodeblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:48:25 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+803ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:16 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:16 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:16 PM</td>
+													<td class='step-details'>Enter email address : testa35@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:17 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Select state : Alabama</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:18 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:19 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:19 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:19 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:19 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:19 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:20 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:20 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:20 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:20 PM</td>
+													<td class='step-details'>Select month : 01</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Select year : 2022</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Enter cvv code :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:21 PM</td>
+													<td class='step-details'>Cvv code blank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:48:25 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cvvcodeblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cvvcodeblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_cvvcodeblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>invaidcvvcode</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:48:40 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+934ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:31 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Enter email address : testa36@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:32 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Click on signup info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:33 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Select state : Kansas</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:34 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:35 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:35 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:35 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:35 PM</td>
+													<td class='step-details'>Select month : 02</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:36 PM</td>
+													<td class='step-details'>Select year : 2020</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:36 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:36 PM</td>
+													<td class='step-details'>Enter cvv code : 52</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:36 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:37 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:37 PM</td>
+													<td class='step-details'>CVV must be 3 or 4 characters long. validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:48:40 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invaidcvvcode_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invaidcvvcode_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invaidcvvcode_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>couponcodeblank</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:48:55 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+219ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:47 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:47 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:47 PM</td>
+													<td class='step-details'>Enter email address : testa37@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:47 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Click on signup next button successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:48 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Select state : Minnesota</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:49 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:50 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:50 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:50 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:50 PM</td>
+													<td class='step-details'>Click on client info next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:50 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:51 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:51 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:51 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:51 PM</td>
+													<td class='step-details'>Select month : 03</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:52 PM</td>
+													<td class='step-details'>Select year : 2021</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:52 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:52 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:52 PM</td>
+													<td class='step-details'>Click on applycoupon button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:48:52 PM</td>
+													<td class='step-details'>Coupon code blank validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:48:55 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_couponcodeblank_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_couponcodeblank_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_couponcodeblank_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>invalidcouponcode</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:49:17 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 21s+37ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:03 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:03 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:03 PM</td>
+													<td class='step-details'>Enter email address : testa38@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:03 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:04 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:04 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:04 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:04 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:09 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:10 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Select state : New Jersey</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:11 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:12 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:12 PM</td>
+													<td class='step-details'>Card holder holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:12 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:12 PM</td>
+													<td class='step-details'>Select month : 04</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Select year : 2023</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Clear coupon code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Enter coupon code : vbcg1254</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:13 PM</td>
+													<td class='step-details'>Click on apply button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:14 PM</td>
+													<td class='step-details'>Invalid coupon code validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:49:17 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcouponcode_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcouponcode_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_invalidcouponcode_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>coupancodeapplysucessfull</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:49:33 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 15s+463ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:24 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:24 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Enter email address : testa39@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:25 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:26 PM</td>
+													<td class='step-details'>Select state : Ohio</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:27 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:28 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:28 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:28 PM</td>
+													<td class='step-details'>Select month : 05</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:28 PM</td>
+													<td class='step-details'>Select year : 2022</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:28 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:29 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:29 PM</td>
+													<td class='step-details'>Clear coupon code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:29 PM</td>
+													<td class='step-details'>Enter coupon code : 200OFF</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:29 PM</td>
+													<td class='step-details'>Click on apply button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:29 PM</td>
+													<td class='step-details'>Coupon 200OFF is applied verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:49:33 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_coupancodeapplysucessfull_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_coupancodeapplysucessfull_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_coupancodeapplysucessfull_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>withoutchecktermsofuse</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:49:50 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 16s+713ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Enter email address : testa40@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Clear comfirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:40 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:41 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:42 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:42 PM</td>
+													<td class='step-details'>Select state : Pennsylvania</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:42 PM</td>
+													<td class='step-details'>Clear zipcode successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:42 PM</td>
+													<td class='step-details'>Enter zipcode : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Clear phonenumber successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Enter phonenumber : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:43 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:44 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:44 PM</td>
+													<td class='step-details'>Select month : 06</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:44 PM</td>
+													<td class='step-details'>Select year : 2020</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:44 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:45 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:45 PM</td>
+													<td class='step-details'>Clear couponcode successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:45 PM</td>
+													<td class='step-details'>Enter couponcode : 200OFF</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:45 PM</td>
+													<td class='step-details'>Click on apply button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:46 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:46 PM</td>
+													<td class='step-details'>Terms of use checkbox validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:49:50 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutchecktermsofuse_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutchecktermsofuse_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_withoutchecktermsofuse_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>cardnumberincorrectverify</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:50:24 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 33s+868ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:56 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:56 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Enter email address : testa41@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:57 PM</td>
+													<td class='step-details'>Clcik on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:58 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:59 PM</td>
+													<td class='step-details'>Select state : Nebraska</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:59 PM</td>
+													<td class='step-details'>Clear zip code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:59 PM</td>
+													<td class='step-details'>Enter zip code : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:59 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:49:59 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Click on clientinfo next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:00 PM</td>
+													<td class='step-details'>Select month : 07</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:01 PM</td>
+													<td class='step-details'>Select year : 2021</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:01 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:01 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:01 PM</td>
+													<td class='step-details'>Clear coupon code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:01 PM</td>
+													<td class='step-details'>Enter coupon code : 200OFF</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:02 PM</td>
+													<td class='step-details'>Click on apply button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:03 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:03 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:50:24 PM</td>
+													<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@style='color:red;']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.115', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3376, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 670ab0e6-d62f-4719-b2f3-a0f5a1146082
+*** Element info: {Using=xpath, value=//*[@style='color:red;']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.getText(Unknown Source)
+	at com.test.pages.SignUpPage.cardnumberincorrectverify(SignUpPage.java:306)
+	at com.test.testcase.SignUpTestcase.cardnumberincorrectverify(SignUpTestcase.java:1766)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre><img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/FAIL/Image_cardnumberincorrectverify_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/FAIL/Image_cardnumberincorrectverify_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/FAIL/Image_cardnumberincorrectverify_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>expirycard</h5>
+						<span class="node-time label grey lighten-1 white-text">Aug 4, 2018 04:50:42 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 17s+881ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Popup closed successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Clear email address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Enter email address : testa42@givmail.com</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Clear password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Enter password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Clear confirm password successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:31 PM</td>
+													<td class='step-details'>Enter confirm password : Superman@123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Click on signup next button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Clear first name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Enter first name : hiren</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Clear last name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Enter last name : test</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Clear billing address successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Enter billing address : 610 trinity orion</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:32 PM</td>
+													<td class='step-details'>Clear city successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Enter city : surat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Select state : Missouri</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Clear zipcode successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Enter zipcode : 99501</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Clear phone number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:33 PM</td>
+													<td class='step-details'>Enter phone number : 8888888888</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:34 PM</td>
+													<td class='step-details'>Click on clientinfo next buttob</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:34 PM</td>
+													<td class='step-details'>Clear card number successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:34 PM</td>
+													<td class='step-details'>Enter card number : 4242424242424242</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:34 PM</td>
+													<td class='step-details'>Clear card holder name successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:34 PM</td>
+													<td class='step-details'>Enter card holder name : abcd</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:35 PM</td>
+													<td class='step-details'>Select month : 01</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:35 PM</td>
+													<td class='step-details'>Select year : 2018</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:35 PM</td>
+													<td class='step-details'>Clear cvv code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:35 PM</td>
+													<td class='step-details'>Enter cvv code : 123</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:35 PM</td>
+													<td class='step-details'>Clear coupon code successfull</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:36 PM</td>
+													<td class='step-details'>Enter coupon code : 200OFF</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:36 PM</td>
+													<td class='step-details'>Click on apply button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:37 PM</td>
+													<td class='step-details'>Terms of use checkbox checked</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:37 PM</td>
+													<td class='step-details'>Click on paynow button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:50:39 PM</td>
+													<td class='step-details'>Card expiration of month validation verify</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:50:42 PM</td>
+													<td class='step-details'>Passed<img data-featherlight='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_expirycard_04-08-2018.png' width='10%' src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_expirycard_04-08-2018.png' data-src='C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1/TestReports/04-08-2018/Report_04-08-2018_16-46-09/Screens/PASS/Image_expirycard_04-08-2018.png'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Aug 4, 2018 04:49:50 PM</td>
+                                                        <td class='linked' test-id='18'>SignUpTestcase.cardnumberincorrectverify</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@style='color:red;']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.115', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3376, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 670ab0e6-d62f-4719-b2f3-a0f5a1146082
+*** Element info: {Using=xpath, value=//*[@style='color:red;']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.getText(Unknown Source)
+	at com.test.pages.SignUpPage.cardnumberincorrectverify(SignUpPage.java:306)
+	at com.test.testcase.SignUpTestcase.cardnumberincorrectverify(SignUpTestcase.java:1766)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>482</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Aug 4, 2018 04:46:10 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Aug 4, 2018 04:50:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 4m 32s+323ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows 8.1</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Firefox</td>
+							</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>Sitewon</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>QA Test</td>
+							</tr>
+							<tr>
+								<td>Tester Name</td>
+								<td>Hiren Gajera</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 15,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 15,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 466,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+ 		</script>
+	</body>
+	
+</html>

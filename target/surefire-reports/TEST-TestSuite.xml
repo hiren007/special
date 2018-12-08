@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="193.907" tests="10" errors="0" skipped="0" failures="5">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1\target\test-classes;C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1\target\classes;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-java\3.8.1\selenium-java-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-api\3.8.1\selenium-api-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.8.1\selenium-chrome-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.8.1\selenium-edge-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.8.1\selenium-firefox-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.8.1\selenium-ie-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.8.1\selenium-opera-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.8.1\selenium-remote-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.8.1\selenium-safari-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-support\3.8.1\selenium-support-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Hiren Gajera\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Hiren Gajera\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-server\3.8.1\selenium-server-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\Hiren Gajera\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Hiren Gajera\.m2\repository\commons-net\commons-net\3.6\commons-net-3.6.jar;C:\Users\Hiren Gajera\.m2\repository\org\w3c\css\sac\1.3\sac-1.3.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\cssparser\cssparser\0.9.24\cssparser-0.9.24.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.28\htmlunit-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.28\htmlunit-core-js-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.28\neko-htmlunit-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\Users\Hiren Gajera\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.7.v20170914\jetty-repacked-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-client\9.4.7.v20170914\jetty-client-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-http\9.4.7.v20170914\jetty-http-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-io\9.4.7.v20170914\jetty-io-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-util\9.4.7.v20170914\jetty-util-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.7.v20170914\jetty-xml-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.28\htmlunit-driver-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.7.v20170914\websocket-api-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.7.v20170914\websocket-client-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.7.v20170914\websocket-common-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\Hiren Gajera\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\Hiren Gajera\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\Hiren Gajera\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\Hiren Gajera\.m2\repository\org\yaml\snakeyaml\1.15\snakeyaml-1.15.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\inject\guice\4.2.0\guice-4.2.0.jar;C:\Users\Hiren Gajera\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\Hiren Gajera\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\testng\testng\6.9.8\testng-6.9.8.jar;C:\Users\Hiren Gajera\.m2\repository\org\beanshell\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar;C:\Users\Hiren Gajera\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\Hiren Gajera\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar;C:\Users\Hiren Gajera\.m2\repository\org\uncommons\reportng\1.1.4\reportng-1.1.4.jar;C:\Users\Hiren Gajera\.m2\repository\velocity\velocity\1.4\velocity-1.4.jar;C:\Users\Hiren Gajera\.m2\repository\velocity\velocity-dep\1.4\velocity-dep-1.4.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi\3.16\poi-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi-ooxml\3.16\poi-ooxml-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.16\poi-ooxml-schemas-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\Hiren Gajera\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\Hiren Gajera\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Users\Hiren Gajera\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\HIRENG~1\AppData\Local\Temp\surefire8382320389086831904\surefirebooter1985324867375359496.jar C:\Users\Hiren Gajera\AppData\Local\Temp\surefire8382320389086831904 2018-09-08T16-45-50_219-jvmRun1 surefire2350963026574812865tmp surefire_07489658730715350171tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1\target\test-classes;C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1\target\classes;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-java\3.8.1\selenium-java-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-api\3.8.1\selenium-api-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.8.1\selenium-chrome-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.8.1\selenium-edge-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.8.1\selenium-firefox-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.8.1\selenium-ie-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.8.1\selenium-opera-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.8.1\selenium-remote-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.8.1\selenium-safari-driver-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-support\3.8.1\selenium-support-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\net\bytebuddy\byte-buddy\1.7.5\byte-buddy-1.7.5.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Hiren Gajera\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Hiren Gajera\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\guava\guava\23.0\guava-23.0.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\errorprone\error_prone_annotations\2.0.18\error_prone_annotations-2.0.18.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\selenium-server\3.8.1\selenium-server-3.8.1.jar;C:\Users\Hiren Gajera\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\Hiren Gajera\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\Hiren Gajera\.m2\repository\commons-net\commons-net\3.6\commons-net-3.6.jar;C:\Users\Hiren Gajera\.m2\repository\org\w3c\css\sac\1.3\sac-1.3.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\cssparser\cssparser\0.9.24\cssparser-0.9.24.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.28\htmlunit-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.28\htmlunit-core-js-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.28\neko-htmlunit-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\httpcomponents\httpmime\4.5.3\httpmime-4.5.3.jar;C:\Users\Hiren Gajera\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.7.v20170914\jetty-repacked-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-client\9.4.7.v20170914\jetty-client-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-http\9.4.7.v20170914\jetty-http-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-io\9.4.7.v20170914\jetty-io-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-util\9.4.7.v20170914\jetty-util-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.7.v20170914\jetty-xml-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.28\htmlunit-driver-2.28.jar;C:\Users\Hiren Gajera\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.7.v20170914\websocket-api-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.7.v20170914\websocket-client-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.7.v20170914\websocket-common-9.4.7.v20170914.jar;C:\Users\Hiren Gajera\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\Hiren Gajera\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\Hiren Gajera\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\Hiren Gajera\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\Hiren Gajera\.m2\repository\org\yaml\snakeyaml\1.15\snakeyaml-1.15.jar;C:\Users\Hiren Gajera\.m2\repository\com\google\inject\guice\4.2.0\guice-4.2.0.jar;C:\Users\Hiren Gajera\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\Hiren Gajera\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\testng\testng\6.9.8\testng-6.9.8.jar;C:\Users\Hiren Gajera\.m2\repository\org\beanshell\bsh\2.0b4\bsh-2.0b4.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar;C:\Users\Hiren Gajera\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\Hiren Gajera\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar;C:\Users\Hiren Gajera\.m2\repository\org\uncommons\reportng\1.1.4\reportng-1.1.4.jar;C:\Users\Hiren Gajera\.m2\repository\velocity\velocity\1.4\velocity-1.4.jar;C:\Users\Hiren Gajera\.m2\repository\velocity\velocity-dep\1.4\velocity-dep-1.4.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi\3.16\poi-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi-ooxml\3.16\poi-ooxml-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.16\poi-ooxml-schemas-3.16.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\Hiren Gajera\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\Hiren Gajera\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Users\Hiren Gajera\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\Hiren Gajera\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Hiren Gajera"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre"/>
+    <property name="basedir" value="C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\HIRENG~1\AppData\Local\Temp\surefire8382320389086831904\surefirebooter1985324867375359496.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_60-b27"/>
+    <property name="user.name" value="Hiren Gajera"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.3"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Hiren Gajera\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\HIRENG~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_60"/>
+    <property name="user.dir" value="C:\Users\Hiren Gajera\eclipse-workspace\SiteWon1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Windows\system32;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.60-b23"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="clickonforgotpassword" classname="com.test.testcase.HomeTestcase" time="0.276"/>
+  <testcase name="clickonforgotpassword" classname="com.test.testcase.HomeTestcase" time="0.06"/>
+  <testcase name="mailidblank" classname="com.test.testcase.ForgotPasswordTestcase" time="0.024"/>
+  <testcase name="mailidblank" classname="com.test.testcase.ForgotPasswordTestcase" time="9.396">
+    <failure message="The element reference of &lt;div&gt; stale: either the element is no longer attached to the DOM or the page has been refreshed&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;MEET&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+The element reference of <div> stale: either the element is no longer attached to the DOM or the page has been refreshed
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+	at com.test.testcase.ForgotPasswordTestcase.mailidblank(ForgotPasswordTestcase.java:18)
+]]></failure>
+    <system-out><![CDATA[DEBUG   15364   [freemark] (): Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+DEBUG   15364   [freemark] (): "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
+]]></system-out>
+    <system-err><![CDATA[1536405391863	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1536405391905	Marionette	DEBUG	Received DOM event "beforeunload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405394131	Marionette	DEBUG	Received DOM event "pagehide" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405394153	Marionette	DEBUG	Received DOM event "unload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405394183	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+JavaScript error: https://sitewon-portal-development.azurewebsites.net/customer/polyfills.d8613740e011537eff2e.bundle.js, line 1: ReferenceError: webpackJsonp is not defined
+JavaScript error: https://sitewon-portal-development.azurewebsites.net/customer/main.3ebb501d2ea4b8b9158e.bundle.js, line 1: Error: In this configuration Angular requires Zone.js
+1536405401139	Marionette	DEBUG	Received DOM event "pageshow" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+Sep 08, 2018 4:46:41 PM org.openqa.selenium.remote.ErrorCodes toStatus
+INFO: HTTP Status: '400' -> incorrect JSON status mapping for 'stale element reference' (404 expected)
+]]></system-err>
+  </testcase>
+  <testcase name="invalidmailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="29.329">
+    <failure message="Unable to locate element: //*[@tabindex=&apos;1&apos;]&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;MEET&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89&#10;*** Element info: {Using=xpath, value=//*[@tabindex=&apos;1&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //*[@tabindex='1']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+*** Element info: {Using=xpath, value=//*[@tabindex='1']}
+	at com.test.testcase.ForgotPasswordTestcase.invalidmailadress(ForgotPasswordTestcase.java:26)
+</failure>
+  </testcase>
+  <testcase name="invalidmailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="61.007">
+    <failure message="Unable to locate element: //*[contains(text(),&apos;Invalid&apos;)]&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;MEET&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#10;Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89&#10;*** Element info: {Using=xpath, value=//*[contains(text(),&apos;Invalid&apos;)]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //*[contains(text(),'Invalid')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'MEET', ip: '192.168.0.108', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 56.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 4104, moz:profile: C:\Users\Hiren Gajera\AppDa..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.3, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: ebe6883c-259e-423e-b25f-712b6ee27e89
+*** Element info: {Using=xpath, value=//*[contains(text(),'Invalid')]}
+	at com.test.testcase.ForgotPasswordTestcase.invalidmailadress(ForgotPasswordTestcase.java:32)
+</failure>
+    <system-out><![CDATA[DEBUG   15364   [freemark] (): Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+DEBUG   15364   [freemark] (): "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+DEBUG   15364   [freemark] (): "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
+]]></system-out>
+    <system-err><![CDATA[1536405421874	Marionette	DEBUG	Received DOM event "beforeunload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405424857	Marionette	DEBUG	Received DOM event "pagehide" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405424859	Marionette	DEBUG	Received DOM event "unload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405424888	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405442573	Marionette	DEBUG	Received DOM event "pageshow" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405442615	Marionette	DEBUG	Received DOM event "beforeunload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405444814	Marionette	DEBUG	Received DOM event "pagehide" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405444856	Marionette	DEBUG	Received DOM event "unload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405444900	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405461066	Marionette	DEBUG	Received DOM event "pageshow" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405462628	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1536405463220	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+]]></system-err>
+  </testcase>
+  <testcase name="doesnotexistmailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="61.437"/>
+  <testcase name="doesnotexistmailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="37.932">
+    <failure message="expected [Email doesn&apos;t exists.] but found [Invalid Email Address.]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Email doesn't exists.] but found [Invalid Email Address.]
+	at com.test.testcase.ForgotPasswordTestcase.doesnotexistmailadress(ForgotPasswordTestcase.java:46)
+</failure>
+    <system-out><![CDATA[DEBUG   15364   [freemark] (): Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+DEBUG   15364   [freemark] (): "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("index.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("head.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("nav.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+DEBUG   15364   [freemark] (): "test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+DEBUG   15364   [freemark] (): Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+DEBUG   15364   [freemark] (): TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+DEBUG   15364   [freemark] (): Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Hiren%20Gajera/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
+]]></system-out>
+    <system-err><![CDATA[1536405484162	Marionette	DEBUG	Received DOM event "beforeunload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405485044	Marionette	DEBUG	Received DOM event "pagehide" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405485045	Marionette	DEBUG	Received DOM event "unload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405485072	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405505671	Marionette	DEBUG	Received DOM event "pageshow" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405505709	Marionette	DEBUG	Received DOM event "beforeunload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405508256	Marionette	DEBUG	Received DOM event "pagehide" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405508283	Marionette	DEBUG	Received DOM event "unload" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405508308	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405521376	Marionette	DEBUG	Received DOM event "pageshow" for "https://sitewon-portal-development.azurewebsites.net/customer/forgotpassword"
+1536405522212	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1536405522462	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+]]></system-err>
+  </testcase>
+  <testcase name="validemailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="37.954">
+    <failure message="expected [Email sent to user.] but found [Invalid Email Address.]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Email sent to user.] but found [Invalid Email Address.]
+	at com.test.testcase.ForgotPasswordTestcase.validemailadress(ForgotPasswordTestcase.java:60)
+</failure>
+  </testcase>
+  <testcase name="validemailadress" classname="com.test.testcase.ForgotPasswordTestcase" time="18.393"/>
+</testsuite>

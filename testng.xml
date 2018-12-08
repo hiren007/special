@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Main Suite" parallel="tests" thread-count="2">
+    <test name="FirefoxTest">
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="test" value="Firefox Browser"/>
+        <classes>
+            <class name="com.test.testcase.HomeTestcase">
+                <methods>
+                    <exclude name="clickonsignup"/>
+                    <include name="clickonforgotpassword"/>
+                </methods>
+            </class>
+            <class name="com.test.testcase.ForgotPasswordTestcase">
+                <methods>
+                    <include name="mailidblank"/>
+                    <include name="invalidmailadress"/>
+                    <include name="doesnotexistmailadress"/>
+                    <include name="validemailadress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+	<test name="Test">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="test" value="Chrome Browser"/>
+        <classes>
+	 		<!-- <class name="com.test.testcase.HomeTestcase">
+			<methods> 
+				<include name="clickonsignup" /> 
+				<exclude name="clickonforgotpassword" /> 
+			</methods> 
+			</class>				
+			<class name="com.test.testcase.PlanSelectTestcase">
+			</class>  -->
+			
+			<!-- Signup step 1 -->
+		 <!-- 	<class name="com.test.testcase.SignUpTestcase"> 
+			<methods> 
+			<include name="withoutcredentialclickonsignupnext" /> 
+			<include name="mailidblank"/> 
+			<include name="invalidmailid"/> 
+			<include name="existmailid"/> 
+			<include name="passwordblank"/> 
+			<include name="confirmpasswordblank"/> 
+			<include name="passwordandconfirmpasswordmissmatch"/> 
+			<include name="passwordformatecalidation"/> 
+			<include name="passwordformatecalidationwithspecialchar"/> 
+				
+			</methods> 
+			</class> -->
+			
+			<!-- Signup step 2: client info -->
+		<!-- 	<class name="com.test.testcase.SignUpTestcase"> 
+			<methods> 
+			<include name="withoutcredentialclickonclientifonext"/> 
+			<include name="firstnameblank"/> 
+			<include name="lastnameblank" /> 
+			<include name="billingadressblank" /> 
+			<include name="cityblank" />
+			<include name="stateblank" /> 
+			<include name="countryblank"/> 
+			<include name="zipcodeblank" /> 
+			<include name="zipcodeblankformate" /> 
+			<include name="phonenumberblank" /> 
+			<include name="phonenumberformate" /> 
+			</methods> 
+			</class> -->
+
+			<!-- Signup step 3: payment details -->
+		 	<!--  <class name="com.test.testcase.SignUpTestcase"> 
+			<methods> 
+			    <include name="withoutcredentialclickonpaymentdeailnext" />
+			 	<include name="cardnumberblank" /> 
+				<include name="invalidcardnumber" /> 
+				<include name="cardholdernameblank" /> 
+				<include name="cardmonthblank"/> 
+				<include name="cardyearblank" /> 
+				<include name="cvvcodeblank" /> 
+				<include name="invaidcvvcode" /> 
+				<include name="couponcodeblank"/> 
+				<include name="invalidcouponcode" /> 
+				<include name="coupancodeapplysucessfull"/> 
+				<include name="withoutchecktermsofuse" />
+				<include name="cardnumberincorrectverify"/> 
+				<include name="expirycard" />
+				</methods> 
+				</class> -->
+
+			<!-- SignIn Testcase -->
+		 <!-- 	<class name="com.test.testcase.SignInTestcase">
+				<methods>
+			     	<include name="withoutcredentialclickonsignin" />
+					<include name="emailadressblank" />
+					<include name="invalidemailaddress" />
+					<include name="passwordblank" />
+					<include name="passwordformate" />
+					<include name="emailcradentialwrong" />
+					<include name="passwordcradentialwrong" />
+					<include name="validcradentialverify" />
+				</methods>
+			</class> -->
+
+			<!-- Forgotpassword -->
+		 	<class name="com.test.testcase.HomeTestcase"> 
+			<methods> 
+			<exclude name="clickonsignup" /> 
+			<include name="clickonforgotpassword" /> 
+			</methods> 
+				</class> 
+				<class name="com.test.testcase.ForgotPasswordTestcase"> 
+			<methods> 
+				<include name="mailidblank" /> 
+				<include name="invalidmailadress" /> 
+				<include name="doesnotexistmailadress" /> 
+				<include name="validemailadress" />
+			</methods> 
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

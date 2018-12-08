@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Main Suite]" parallel="tests">
+  <test thread-count="2" name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="test" value="Firefox Browser"/>
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.test.testcase.ForgotPasswordTestcase">
+        <methods>
+          <include name="validemailadress"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="doesnotexistmailadress"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.ForgotPasswordTestcase -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="2" name="Test(failed)" parallel="tests">
+    <parameter name="test" value="Chrome Browser"/>
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.test.testcase.ForgotPasswordTestcase">
+        <methods>
+          <include name="validemailadress"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="doesnotexistmailadress"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.testcase.ForgotPasswordTestcase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Main Suite] -->
